@@ -1,0 +1,24 @@
+package uk.oakacademy.taskservice.entities;
+
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+import java.io.Serializable;
+
+@Document(indexName = "taskDetail")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of = {"id"})
+public class TaskDetail implements Serializable {
+    @Id
+    private String id;
+    private String employeeName;
+    private String employeeSurname;
+    private String taskTitle;
+    private String taskDescription;
+    private String status;
+    private String priority;
+}
