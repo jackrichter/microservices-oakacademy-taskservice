@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class TaskServiceImpl implements TaskService {
+
     private final TaskRepository taskRepository;
     private final ModelMapper modelMapper;
 
@@ -22,7 +23,7 @@ public class TaskServiceImpl implements TaskService {
     public TaskDTO saveTask(TaskDTO taskDTO) {
         Task task = modelMapper.map(taskDTO, Task.class);
         task = taskRepository.save(task);
-        taskDTO.setId(task.getId());
+        taskDTO = modelMapper.map(task, TaskDTO.class);
         return taskDTO;
     }
 
