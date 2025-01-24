@@ -9,6 +9,7 @@ public interface TaskDetailService {
     public TaskDetailDTO getTaskDetailById(String id);
     public List<TaskDetailDTO> getAllTaskDetails();
     public TaskDetailDTO updateTaskDetail(TaskDetailDTO taskDetailDTO);
-    public TaskDetailDTO deleteByTaskDetail(String id);
+    public TaskDetailDTO deleteTaskDetail(String id);
     public List<TaskDetailDTO> getWithContainDescription(String description);
+    public List<TaskDetailDTO> getWithStartsName(String text);
 }

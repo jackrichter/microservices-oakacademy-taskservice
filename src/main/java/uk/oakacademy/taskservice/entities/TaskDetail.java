@@ -15,6 +15,7 @@ import java.io.Serializable;
 public class TaskDetail implements Serializable {
     @Id
     private String id;
+    private String employeeId;
     private String employeeName;
     private String employeeSurname;
     private String taskTitle;

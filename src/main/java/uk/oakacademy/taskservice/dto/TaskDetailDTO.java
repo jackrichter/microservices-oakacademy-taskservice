@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(of = {"id"})
 public class TaskDetailDTO {
     private String id;
+    private String employeeId;
     private String employeeName;
     private String employeeSurname;
     private String taskTitle;
